@@ -95,6 +95,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FaceDetector\Detector.cs" />
+    <Compile Include="FaceDetector\Feature.cs" />
+    <Compile Include="FaceDetector\Rectangle.cs" />
+    <Compile Include="FaceDetector\RectFeature.cs" />
+    <Compile Include="FaceDetector\Stage.cs" />
+    <Compile Include="FaceDetector\Tree.cs" />
+    <Compile Include="FaceDetector\Utils.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -105,6 +112,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utility\Converters.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
   </ItemGroup>
@@ -146,6 +154,10 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Troll.png" />
+    <Content Include="FaceModel\ExifLib.dll" />
+    <Content Include="FaceModel\haarcascade_frontalface_alt.xml" />
+    <Content Include="FaceModel\shutter.wav" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">

@@ -16,7 +16,7 @@ namespace Trollfie
         /// <summary>
         /// Allows tracking page views, exceptions and other telemetry through the Microsoft Application Insights service.
         /// </summary>
-        public TelemetryClient TelemetryClient = new TelemetryClient();
+        //public TelemetryClient TelemetryClient = new TelemetryClient();
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.

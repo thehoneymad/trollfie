@@ -49,12 +49,23 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button x:Name="CaptureImageButton" Content="Capture Image" 
-            HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" 
-            Width="267" Click="CaptureImageButton_Click"/>
-            <Image Name="facesPic" HorizontalAlignment="Center" 
-            Height="388" Margin="0,170,0,0" 
-            VerticalAlignment="Top" Width="427"/>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"> </RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0">
+                <Button x:Name="CaptureImageButton" Content="Capture Image" 
+                    HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" 
+                    Width="267" Command="{Binding CaptureImageCommand}" />
+                <Button Width="267" Content="Process Picture" HorizontalAlignment="Center" Command="{Binding ProcessCommand}" ></Button>
+            </StackPanel>
+            
+            
+            <Image Grid.Row="1" Name="facesPic" HorizontalAlignment="Center" 
+            Height="388" 
+            VerticalAlignment="Top" Width="427" Source="{Binding ViewImageSource}"/>
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
